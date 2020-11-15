@@ -12,7 +12,4 @@ export default {
   editUser({ commit }, updatedUser) {
     commit("EDIT_USER", updatedUser);
   },
-  deleteUser({ commit }, userId) {
-    commit("DELETE_USER", userId);
-  },
 };

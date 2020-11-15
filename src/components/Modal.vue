@@ -5,7 +5,6 @@
       <div class="modal fade" :class="{ show: displayT }" v-if="displayT">
         <div class="modal-dialog">
           <div class="modal-content">
-            @
             <div class="modal-header text-center">
               <h5 class="modal-title ">
                 Edit Customer

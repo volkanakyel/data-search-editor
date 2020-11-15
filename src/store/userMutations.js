@@ -7,8 +7,4 @@ export default {
     const index = state.users.findIndex((user) => user._id == updatedUser._id);
     state.users.splice(index, 1, { ...updatedUser });
   },
-  DELETE_USER(state, userId) {
-    const index = state.users.findIndex((user) => user._id == userId);
-    state.users.splice(index, 1);
-  },
 };

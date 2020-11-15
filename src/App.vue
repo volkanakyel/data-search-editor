@@ -1,14 +1,21 @@
 <template>
   <div v-if="error">{{ error }}</div>
-  <div v-else class="container">
+  <div v-else>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h2 class="text-center">
+          Smart Editor Vue.js
+        </h2>
+        <p class="text-center">
+          Data editor and search by field. modified your users and upload your
+          file
+        </p>
+      </div>
+    </div>
     <div class="row justify-content-center">
       <div data-test="cool-card-div" class="col-m-8">
-        <h3 class="text-center">
-          Smart Editor Vue.js
-        </h3>
-        <br />
         <vue-blob-json-csv
-          title="Download Todos JSON"
+          title="Download your users.json"
           file-type="json"
           file-name="suadeLabs"
           :data="users"

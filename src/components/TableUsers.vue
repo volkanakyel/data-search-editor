@@ -27,6 +27,7 @@
         class="form-control"
         aria-label="Username"
         aria-describedby="addon-wrapping"
+        :placeholder="selectedField"
       />
     </div>
     <table class="table table-hover" id="my-table">
@@ -37,7 +38,6 @@
           <th scope="col">Age</th>
           <th scope="col">Eye Color</th>
           <th scope="col">Edit</th>
-          <th scope="col">Remove</th>
         </tr>
       </thead>
       <tbody>
@@ -52,21 +52,21 @@
               class="fas fa-user-edit fa-lg"
             ></i>
           </td>
-          <td class="text-center">
-            <i
-              @click="removeUser(user._id)"
-              class="far fa-window-close fa-lg"
-            ></i>
-          </td>
         </tr>
       </tbody>
     </table>
-    <div class="card-footer pb-0 pt-3">
-      <jw-pagination
-        :items="filteredByField"
-        @changePage="onChangePage"
-      ></jw-pagination>
+    <div class="card text-center">
+      <div class="card-body">
+        <jw-pagination
+          :items="filteredByField"
+          @changePage="onChangePage"
+        ></jw-pagination>
+      </div>
+      <div class="card-footer text-muted">
+        <a href="https://github.com/volkanakyel"> Volkan AKYEL</a>
+      </div>
     </div>
+    <div class="card-footer pb-0 pt-3"></div>
     <modal
       data-testid="openModal"
       :displayT="displayModal"
@@ -105,9 +105,6 @@ export default {
     },
     closeModal() {
       this.displayModal = false;
-    },
-    removeUser(userId) {
-      this.$store.dispatch("deleteUser", userId);
     },
     onChangePage(pageOfItems) {
       this.pageOfItems = pageOfItems;
