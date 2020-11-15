@@ -1,5 +1,7 @@
 # data-search-editor
 
+### Project Features
+
 #### - see a paginated list of people.
 
 #### - do a full text search to dynamically filter the results (searching on all fields). - select an item and see the details in the same page.
