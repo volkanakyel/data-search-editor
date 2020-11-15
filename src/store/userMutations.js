@@ -3,8 +3,9 @@ export default {
     state.users = users;
   },
   EDIT_USER(state, updatedUser) {
-    //Splice method and ... Operator on copying object
+    //Retrieving the index of the user we want update
     const index = state.users.findIndex((user) => user._id == updatedUser._id);
+    //replace the correct index with splice method
     state.users.splice(index, 1, { ...updatedUser });
   },
 };
