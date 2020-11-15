@@ -7,9 +7,10 @@
           <div class="modal-content">
             <div class="modal-header text-center">
               <h5 class="modal-title ">
-                Edit Customer
+                Edit User
               </h5>
             </div>
+
             <div class="modal-body">
               <div class="form-row">
                 <div class="col-md-6 col-xs-12">
